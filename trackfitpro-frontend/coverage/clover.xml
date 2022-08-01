@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1659387840043" clover="3.2.0">
-  <project timestamp="1659387840043" name="All files">
+<coverage generated="1659389094406" clover="3.2.0">
+  <project timestamp="1659389094406" name="All files">
     <metrics statements="18" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="5" elements="25" coveredelements="21" complexity="0" loc="18" ncloc="18" packages="1" files="1" classes="1"/>
     <file name="newExercise.js" path="C:\Users\Kwame-PC\Desktop\code\exercise-tracker-updated\trackfitpro-frontend\src\components\newExercise.js">
       <metrics statements="18" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="5"/>
