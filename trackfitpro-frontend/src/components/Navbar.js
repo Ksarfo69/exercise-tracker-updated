@@ -13,8 +13,8 @@ function Navbarr (props) {
 
         return(
               <Navbar bg="primary" variant="dark"
-              sticky="top" expand="sm" collapseOnSelect>
-              <Navbar.Brand>
+              sticky="top" expand="sm" collapseOnSelect data-testid="container">
+              <Navbar.Brand data-testid="brand">
               <a style={{textDecoration: "none", color: "white"}} href="/">TrackFitPro</a>
               </Navbar.Brand>
 
@@ -24,7 +24,7 @@ function Navbarr (props) {
                   
                 <Nav.Link href="/users/add">Create New User</Nav.Link>
                   <Nav.Link href="/exercises">Exercise Log</Nav.Link>
-                <NavDropdown title={props.user} id="basic-nav-dropdown">
+                <NavDropdown title={props.user} id="basic-nav-dropdown" data-testid="dropdown">
                   {
                     props.users.map(item => (
                       <NavDropdown.Item onClick={()=>props.setUser(item)}>{item}</NavDropdown.Item>
