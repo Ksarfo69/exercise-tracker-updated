@@ -13,8 +13,8 @@ import './footer.css'
 
 function Footer () {
     return(
-        <div className="Row footerbox">
-            <div className="col-6 m-auto color">
+        <div className="Row footerbox" data-testid="container">
+            <div className="col-6 m-auto color" data-testid="info">
             <p>Exercise Tracker App 2021</p>
             </div>
             
