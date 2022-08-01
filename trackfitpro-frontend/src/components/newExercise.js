@@ -11,7 +11,7 @@ function NewExercise (props) {
     
     const[exercise, setExercise] = useState('');
     const[duration, setDuration] = useState(0);
-    const[date, setDate] = useState(new Date());
+    const[date, setDate] = useState('');
   
 
 
@@ -40,6 +40,7 @@ const dateHandler = (e) => {
         duration: duration,
         date: date
     };
+    
     axios.post('http://localhost:4000/exercises/add', newlyadded);
 
     window.location = '/'
@@ -47,27 +48,27 @@ const dateHandler = (e) => {
 
 
         return (
-		<div className="container">
-		 <h1>Welcome, {props.user}</h1>
+		<div className="container" data-testid="container">
+		 <h1 data-testid="user">Welcome, {props.user}</h1>
          <form className="form-box row" name ="completionstatus" onSubmit={submitHandler}>
 
 		 	<label >User: </label>
-             <select id="username" value = {props.user} onChange={userHandler}>
+             <select id="username" value = {props.user}  onChange={userHandler} data-testid="username">
                  {props.users.map(x => <option>{x}</option>)}
                 
              </select>
              <br />
 
              <label>Exercise: </label>
-             <input id = "exercise" type = 'text' value = {exercise} onChange={exerciseHandler}/>
+             <input id = "exercise" type = 'text' value = {exercise} onChange={exerciseHandler} data-testid="exercise"/>
              <br/>
 
              <label>Date: </label>
-             <DatePicker id = "date" selected = {date} onChange = {dateHandler}/>
+             <DatePicker id = "date" selected = {date} onChange = {dateHandler} />
              <br/>
 
              <label>Duration(mins): </label>
-             <input id = "duration" type = 'text' value = {duration} onChange={durationHandler}/>
+             <input id = "duration" type = 'text' value = {duration} onChange={durationHandler} data-testid="duration"/>
              <br />
              <button className="btn btn-primary btn-lg ml-3"  type = "submit" >Add Exercise</button>
          </form>	
