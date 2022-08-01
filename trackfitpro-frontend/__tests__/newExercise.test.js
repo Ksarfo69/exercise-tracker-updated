@@ -2,7 +2,7 @@ import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/react'
 import '@testing-library/jest-dom'
-import NewExercise from '../src/components/newExercise'
+import NewExercise from '../src/pages/newExercise'
 import axios from 'axios'
 
 jest.mock('axios')

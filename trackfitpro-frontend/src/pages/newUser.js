@@ -46,7 +46,7 @@ class NewUser extends React.Component {
 
        
         return (
-            <div className="container">
+            <div className="container" data-testid="container">
             <form className="form-box row" name ="completionstatus" onSubmit={this.addUser}>
 
             <label>Username: </label>

@@ -3,11 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
 import Navbarr from './components/Navbar'
 import './app.css';
-import NewUser from './components/newUser.js';
+import NewUser from './pages/newUser.js';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import ExerciseLog from './components/exercise log';
-import NewExercise from './components/newExercise';
-import EditExercise from './components/edit exercise';
+import ExerciseLog from './pages/exercise log';
+import NewExercise from './pages/newExercise';
+import EditExercise from './pages/edit exercise';
 import axios from 'axios';
 
 function App (){ 
