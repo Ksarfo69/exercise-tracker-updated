@@ -5,12 +5,6 @@ import '@testing-library/jest-dom'
 import Navbarr from '../src/components/Navbar'
 
 
-// jest.mock(props, () => ({
-//     __esModule: true,
-
-//     default: ["Kwame", "Adu"],
-// }));
-
 describe(Navbarr, ()=>{
     it("checks if the whole component has been rendered correctly", ()=>{
         render(<Navbarr users={["test", "user"]} user="test"/>)
