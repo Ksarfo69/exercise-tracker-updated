@@ -36,6 +36,7 @@ jobs:
       - name: Run Jest Tests
         run: |
           echo "Running Jest Tests"
+          cd trackfitpro-frontend
           npm run test
         env:
           CI: true
