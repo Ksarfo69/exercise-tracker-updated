@@ -35,7 +35,7 @@ const  deleteExercise = async(id) => {
 
   return(
   <div>
-    <table class="table">
+    <table class="table" data-testid="container">
       <thead>
         <tr>
           <th>User</th>
@@ -45,14 +45,14 @@ const  deleteExercise = async(id) => {
           <th>Actions</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody data-testid="body">
       {exercises.map(item => (
         <tr>
         <td>{item.user}</td>
         <td>{item.exercise}</td>
         <td>{item.duration}</td>
         <td>{item.date.slice(0,10)}</td>
-        <td> <button onClick={()=> window.location = `/exercises/${item._id}`}>Edit</button> || <button onClick={()=>deleteExercise(item._id)}>Delete</button></td>
+        <td> <button onClick={()=> window.location = `/exercises/${item._id}`}>Edit</button> || <button data-testid="delete" onClick={()=>deleteExercise(item._id)}>Delete</button></td>
       </tr>
       ))}   
       </tbody>

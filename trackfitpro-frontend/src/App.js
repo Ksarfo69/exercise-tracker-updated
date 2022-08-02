@@ -5,9 +5,9 @@ import Navbarr from './components/Navbar'
 import './app.css';
 import NewUser from './pages/newUser.js';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import ExerciseLog from './pages/exercise log';
+import ExerciseLog from './pages/exerciseLog';
 import NewExercise from './pages/newExercise';
-import EditExercise from './pages/edit exercise';
+import EditExercise from './pages/editExercise';
 import axios from 'axios';
 
 function App (){ 
