@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "eslint",
+    "lint": "eslint ./src",
     "test": "jest",
     "open:coverage": "start ./coverage/lcov-report/index.html",
     "eject": "react-scripts eject"

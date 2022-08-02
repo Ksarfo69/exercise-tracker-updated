@@ -1,13 +1,5 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//eslint-disable-next-line
-import Button from 'react-bootstrap/Button';
-//eslint-disable-next-line
-import Container from 'react-bootstrap/Container';
-//eslint-disable-next-line
-import Row from 'react-bootstrap/Row';
-//eslint-disable-next-line
-import Col from 'react-bootstrap/Col';
 import axios from 'axios';
 
 
@@ -33,7 +25,7 @@ class NewUser extends React.Component {
         this.setState({age: e.target.value})
     }
 
-    addUser = (e) => {
+    addUser = () => {
         const newUser = {
             username : this.state.username,
             age : this.state.age

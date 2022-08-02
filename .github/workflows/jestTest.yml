@@ -14,10 +14,12 @@ jobs:
       - name: Install the Dependencies
         run: |
           echo "Installing the dependencies"
+          cd trackfitpro-frontend
           npm install --legacy-peer-deps
       - name: Run Eslint
         run: |
           echo "Running eslint"
+          cd trackfitpro-frontend
           npm run lint
         env:
           CI: true
@@ -29,6 +31,7 @@ jobs:
       - name: Install the Dependencies
         run: |
           echo "Installing the dependencies"
+          cd trackfitpro-frontend
           npm install --legacy-peer-deps
       - name: Run Jest Tests
         run: |
