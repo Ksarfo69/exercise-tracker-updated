@@ -28,10 +28,10 @@ function EditExercise (props){
                 props.setUsers(res.data.map(users => users.username));
             }
             const exercises = await axios.get('http://localhost:4000/exercises/' + id)
-            props.setUser(res.data.user);
-            setExercise(res.data.exercise);
-            setDuration(res.data.duration);
-            setDate(new Date(res.data.date));
+            props.setUser(exercises.data.user);
+            setExercise(exercises.data.exercise);
+            setDuration(exercises.data.duration);
+            setDate(new Date(exercises.data.date));
 
         }catch(err){
             console.log(err)
