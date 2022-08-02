@@ -21,26 +21,25 @@ function EditExercise (props){
 
 
     useLayoutEffect( () => {
-        axios.get('http://localhost:4000/users')
-            .then(res => {
-                if(res.data.length>0) {
-                   props.setUsers(res.data.map(users => users.username));
-                    }
-                })
-
-
-
-        axios.get('http://localhost:4000/exercises/' + id)
-        .then(res => {
+        const fetchinfo = async() => {
+            try{
+            const res = await axios.get('http://localhost:4000/users')
+            if(res.data.length>0) {
+                props.setUsers(res.data.map(users => users.username));
+            }
+            const exercises = await axios.get('http://localhost:4000/exercises/' + id)
             props.setUser(res.data.user);
             setExercise(res.data.exercise);
             setDuration(res.data.duration);
             setDate(new Date(res.data.date));
-        })
 
+        }catch(err){
+            console.log(err)
+        }
+    }
 
-
-    },[props.user])
+    fetchinfo()
+},[props.user])
 
   
        
@@ -79,8 +78,8 @@ const dateHandler = (e) => {
 }
 
         return (
-		<div className="container">
-		 <h1>Edit your exercise, {props.user}</h1>
+		<div className="container" data-testid="container">
+		 <h1 data-testid="user">Edit your exercise, {props.user}</h1>
          <form className="form-box row" name ="completionstatus" onSubmit={submitHandler}>
 
 		 	<label >User: </label>
